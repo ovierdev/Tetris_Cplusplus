@@ -6,6 +6,7 @@
  */
 #include <SDL3/SDL.h>
 #include <SDL3/SDL_events.h>
+#include <SDL3/SDL_timer.h>
 #include <iostream>
 #include <array>
 
@@ -20,6 +21,8 @@ constexpr float BOARD_WIDTH = BOARD_COLUMNS * CELL_SIZE;
 constexpr float BOARD_HEIGHT = BOARD_ROWS * CELL_SIZE;
 constexpr float BOARD_X = (WINDOW_WIDTH - BOARD_WIDTH) / 2.0f;
 constexpr float BOARD_Y = (WINDOW_HEIGHT - BOARD_HEIGHT) /2.0f;
+
+constexpr Uint64 DROP_INTERVAL_MS = 500;
 
 struct Block {
     int x;
@@ -123,6 +126,8 @@ int main(){
         }}
     };
 
+    Uint64 lastDropTime = SDL_GetTicks();
+
     while(running){
         SDL_Event event;
 
@@ -132,7 +137,7 @@ int main(){
             }
             if ( event.type == SDL_EVENT_KEY_DOWN){
                 if (event.key.key == SDLK_LEFT){
-                    if (canMove(piece, 1, 0)){
+                    if (canMove(piece, -1, 0)){
                         piece.x--;
                     }
                 }
@@ -142,11 +147,20 @@ int main(){
                     }
                 }
                 if (event.key.key == SDLK_DOWN){
-                    if(canMove(piece, 1, 0)){
+                    if(canMove(piece, 0, 1)){
                         piece.y++;
                     }
                 }
             }
+        }
+
+        const Uint64 currentTime = SDL_GetTicks();
+
+        if (currentTime - lastDropTime >= DROP_INTERVAL_MS){
+            if(canMove(piece, 0, 1)){
+                piece.y++;
+            }
+            lastDropTime  = currentTime;
         }
 
         SDL_SetRenderDrawColor(renderer, 20, 20, 20, 255);
