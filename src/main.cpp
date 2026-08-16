@@ -74,6 +74,25 @@ void drawPiece(
     }
 }
 
+bool canMove( const Piece& piece, int offsetX, int offsetY){
+    for (const Block& block : piece.blocks){
+        const int newX = piece.x + block.x + offsetX;
+        const int newY = piece.y + block.y + offsetY;
+
+        if (newX < 0){
+            return false;
+        }
+
+        if(newX >= BOARD_COLUMNS){
+            return false;
+        }
+        if (newY >= BOARD_ROWS){
+            return false;
+        }
+    }
+    return true;
+}
+
 int main(){
     if (!SDL_Init(SDL_INIT_VIDEO)){
         std::cerr << "Error inicializando SDL: "
@@ -113,18 +132,25 @@ int main(){
             }
             if ( event.type == SDL_EVENT_KEY_DOWN){
                 if (event.key.key == SDLK_LEFT){
-                    piece.x--;
+                    if (canMove(piece, 1, 0)){
+                        piece.x--;
+                    }
                 }
                 if (event.key.key == SDLK_RIGHT){
-                    piece.x++;
+                    if(canMove(piece, 1, 0)){
+                        piece.x++;
+                    }
                 }
                 if (event.key.key == SDLK_DOWN){
-                    piece.y++;
+                    if(canMove(piece, 1, 0)){
+                        piece.y++;
+                    }
                 }
             }
         }
 
         SDL_SetRenderDrawColor(renderer, 20, 20, 20, 255);
+        SDL_RenderClear(renderer);
         SDL_SetRenderDrawColor(renderer, 100, 100, 100, 255);
         drawBoard(renderer);
         SDL_SetRenderDrawColor(renderer, 180, 80, 180, 255);
