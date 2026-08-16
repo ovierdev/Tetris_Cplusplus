@@ -35,6 +35,8 @@ struct Piece{
     std::array<Block, 4> blocks;
 };
 
+using Board = std::array<std::array<bool, BOARD_COLUMNS>, BOARD_ROWS>;
+
 constexpr std::array<Block, 4> T_PIECE{{
     {1, 0},
     {0, 1},
@@ -77,26 +79,54 @@ void drawPiece(
     }
 }
 
-bool canMove( const Piece& piece, int offsetX, int offsetY){
+bool canMove( const Board& board, const Piece& piece, int offsetX, int offsetY){
     for (const Block& block : piece.blocks){
         const int newX = piece.x + block.x + offsetX;
         const int newY = piece.y + block.y + offsetY;
 
-        if (newX < 0){
+        if (newX < 0 || newX >= BOARD_COLUMNS || newY >= BOARD_ROWS){
             return false;
         }
 
-        if(newX >= BOARD_COLUMNS){
-            return false;
-        }
-        if (newY >= BOARD_ROWS){
+        if (newY >= 0 && board[newY][newX]){
             return false;
         }
     }
     return true;
 }
 
+void lockPiece(Board& board, const Piece& piece){
+    for (const Block& block: piece.blocks){
+        const int boardX = piece.x + block.x;
+        const int boardY= piece.y + block.y;
+
+        if (boardX >= 0 && boardX < BOARD_COLUMNS && boardY >= 0){
+            board[boardY][boardX] = true;
+        }
+    }
+}
+
+void drawLockedBlocks(SDL_Renderer* renderer, const Board& board){
+    for (int row = 0; row < BOARD_ROWS; ++row){
+        for (int column =0; column < BOARD_COLUMNS; ++column){
+            if (!board[row][column]){
+                continue;
+            }
+            SDL_FRect rect{
+                BOARD_X + column * CELL_SIZE,
+                BOARD_Y + row * CELL_SIZE,
+                CELL_SIZE,
+                CELL_SIZE
+            };
+            SDL_RenderFillRect(renderer, &rect);
+        }
+    }
+}
+
 int main(){
+
+    Board board{};
+
     if (!SDL_Init(SDL_INIT_VIDEO)){
         std::cerr << "Error inicializando SDL: "
             << SDL_GetError()
@@ -137,17 +167,17 @@ int main(){
             }
             if ( event.type == SDL_EVENT_KEY_DOWN){
                 if (event.key.key == SDLK_LEFT){
-                    if (canMove(piece, -1, 0)){
+                    if (canMove(board, piece, -1, 0)){
                         piece.x--;
                     }
                 }
                 if (event.key.key == SDLK_RIGHT){
-                    if(canMove(piece, 1, 0)){
+                    if(canMove(board, piece, 1, 0)){
                         piece.x++;
                     }
                 }
                 if (event.key.key == SDLK_DOWN){
-                    if(canMove(piece, 0, 1)){
+                    if(canMove(board, piece, 0, 1)){
                         piece.y++;
                     }
                 }
@@ -156,18 +186,41 @@ int main(){
 
         const Uint64 currentTime = SDL_GetTicks();
 
-        if (currentTime - lastDropTime >= DROP_INTERVAL_MS){
-            if(canMove(piece, 0, 1)){
+        if (currentTime - lastDropTime >= DROP_INTERVAL_MS) {
+            if (canMove(board, piece, 0, 1)) {
                 piece.y++;
+            } else {
+                lockPiece(board, piece);
+                piece = Piece{
+                    3,
+                    0,
+                    {{
+                        {1, 0},
+                        {0, 1},
+                        {1, 1},
+                        {2, 1}
+                    }}
+                };
             }
-            lastDropTime  = currentTime;
+            lastDropTime = currentTime;
         }
 
         SDL_SetRenderDrawColor(renderer, 20, 20, 20, 255);
         SDL_RenderClear(renderer);
         SDL_SetRenderDrawColor(renderer, 100, 100, 100, 255);
         drawBoard(renderer);
-        SDL_SetRenderDrawColor(renderer, 180, 80, 180, 255);
+        SDL_SetRenderDrawColor(
+            renderer,
+            70, 150, 210, 255
+        );
+
+        drawLockedBlocks(renderer, board);
+
+        SDL_SetRenderDrawColor(
+            renderer,
+            180, 80, 180, 255
+        );
+
         drawPiece(renderer, piece);
         SDL_RenderPresent(renderer);
     }
