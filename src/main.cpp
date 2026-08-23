@@ -32,8 +32,48 @@ struct Block {
 struct Piece{
     int x;
     int y;
+    int rotation;
     std::array<Block, 4> blocks;
 };
+
+constexpr std::array<std::array<Block, 4>, 4> T_ROTATIONS{{
+    {{
+        {1, 0},
+        {0, 1},
+        {1, 1},
+        {2, 1}
+    }},
+    {{
+        {1, 0},
+        {1, 1},
+        {2, 1},
+        {1, 2}
+    }},
+    {{
+        {0, 1},
+        {1, 1},
+        {2, 1},
+        {1, 2}
+    }},
+    {{
+        {1, 0},
+        {0, 1},
+        {1, 1},
+        {1, 2}
+    }}
+}};
+Piece rotatedPiece(const Piece& piece){
+    Piece rotated = piece;
+
+    rotated.rotation =
+        (piece.rotation + 1) % 4;
+
+    rotated.blocks =
+        T_ROTATIONS[rotated.rotation];
+
+    return rotated;
+}
+
 
 using Board = std::array<std::array<bool, BOARD_COLUMNS>, BOARD_ROWS>;
 
@@ -79,21 +119,30 @@ void drawPiece(
     }
 }
 
-bool canMove( const Board& board, const Piece& piece, int offsetX, int offsetY){
+bool canPlace(const Board& board, const Piece& piece){
     for (const Block& block : piece.blocks){
-        const int newX = piece.x + block.x + offsetX;
-        const int newY = piece.y + block.y + offsetY;
+        const int x = piece.x + block.x;
+        const int y = piece.y + block.y;
 
-        if (newX < 0 || newX >= BOARD_COLUMNS || newY >= BOARD_ROWS){
+        if (x < 0 || x >= BOARD_COLUMNS || y >= BOARD_ROWS){
             return false;
         }
 
-        if (newY >= 0 && board[newY][newX]){
+        if (y>= 0 && board[y][x]){
             return false;
         }
     }
     return true;
 }
+
+bool canMove( const Board& board, const Piece& piece, int offsetX, int offsetY){
+    Piece moved = piece;
+    moved.x = piece.x + offsetX;
+    moved.y = piece.y + offsetY;
+
+    return canPlace(board, moved);
+}
+
 
 void lockPiece(Board& board, const Piece& piece){
     for (const Block& block: piece.blocks){
@@ -148,12 +197,10 @@ int main(){
     bool running = true;
 
     Piece piece{
-        3, 0, {{
-            {1, 0},
-            {0, 1},
-            {1, 1},
-            {2, 1}
-        }}
+        3,
+        0,
+        0,
+        T_ROTATIONS[0]
     };
 
     Uint64 lastDropTime = SDL_GetTicks();
@@ -181,6 +228,13 @@ int main(){
                         piece.y++;
                     }
                 }
+                if (event.key.key == SDLK_UP){
+                    Piece rotated = rotatedPiece(piece);
+
+                    if (canPlace(board, rotated)){
+                        piece =rotated;
+                    }
+                }
             }
         }
 
@@ -194,12 +248,8 @@ int main(){
                 piece = Piece{
                     3,
                     0,
-                    {{
-                        {1, 0},
-                        {0, 1},
-                        {1, 1},
-                        {2, 1}
-                    }}
+                    0,
+                    T_ROTATIONS[0]
                 };
             }
             lastDropTime = currentTime;

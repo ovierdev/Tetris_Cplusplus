@@ -1,22 +1,56 @@
 {
-  "date": "2026-08-16T03:32:44.688238495+03:00",
+  "date": "2026-08-17T00:06:51.902018748+03:00",
   "data": {
-    "CMAKE_CXX_STANDARD_REQUIRED": {
+    "SDL3TEST_LIBRARY": {
       "location": {
-        "uri": "file:///home/ovieroh/Workspace/cpp-tetris/CMakeLists.txt",
+        "uri": "file:///usr/lib64/cmake/SDL3/SDL3Config.cmake",
         "range": {
           "start": {
-            "line": 5,
+            "line": 134,
             "character": 4
           },
           "end": {
-            "line": 5,
-            "character": 31
+            "line": 134,
+            "character": 20
           }
         }
       },
-      "document_info": "defined variable\nfrom: /home/ovieroh/Workspace/cpp-tetris/CMakeLists.txt",
+      "document_info": "defined variable\nfrom: /usr/lib64/cmake/SDL3/SDL3Config.cmake",
       "is_function": false
+    },
+    "_cmake_expected_targets": {
+      "location": {
+        "uri": "file:///usr/lib64/cmake/SDL3/SDL3sharedTargets.cmake",
+        "range": {
+          "start": {
+            "line": 20,
+            "character": 4
+          },
+          "end": {
+            "line": 20,
+            "character": 27
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /usr/lib64/cmake/SDL3/SDL3sharedTargets.cmake",
+      "is_function": false
+    },
+    "_sdl_create_target_alias_compat": {
+      "location": {
+        "uri": "file:///usr/lib64/cmake/SDL3/SDL3Config.cmake",
+        "range": {
+          "start": {
+            "line": 111,
+            "character": 9
+          },
+          "end": {
+            "line": 111,
+            "character": 40
+          }
+        }
+      },
+      "document_info": "defined function\nfrom: /usr/lib64/cmake/SDL3/SDL3Config.cmake",
+      "is_function": true
     },
     "PACKAGE_VERSION_EXACT": {
       "location": {
@@ -35,6 +69,363 @@
       "document_info": "defined variable\nfrom: /usr/lib64/cmake/SDL3/SDL3ConfigVersion.cmake",
       "is_function": false
     },
+    "SDL3_SDL3_test_FOUND": {
+      "location": {
+        "uri": "file:///usr/lib64/cmake/SDL3/SDL3Config.cmake",
+        "range": {
+          "start": {
+            "line": 98,
+            "character": 8
+          },
+          "end": {
+            "line": 98,
+            "character": 28
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /usr/lib64/cmake/SDL3/SDL3Config.cmake",
+      "is_function": false
+    },
+    "CMAKE_CXX_STANDARD": {
+      "location": {
+        "uri": "file:///home/ovieroh/Workspace/cpp-tetris/CMakeLists.txt",
+        "range": {
+          "start": {
+            "line": 4,
+            "character": 4
+          },
+          "end": {
+            "line": 4,
+            "character": 22
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /home/ovieroh/Workspace/cpp-tetris/CMakeLists.txt",
+      "is_function": false
+    },
+    "SDL3_STATIC_LIBRARIES": {
+      "location": {
+        "uri": "file:///usr/lib64/cmake/SDL3/SDL3Config.cmake",
+        "range": {
+          "start": {
+            "line": 131,
+            "character": 4
+          },
+          "end": {
+            "line": 131,
+            "character": 25
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /usr/lib64/cmake/SDL3/SDL3Config.cmake",
+      "is_function": false
+    },
+    "_sdl3_framework": {
+      "location": {
+        "uri": "file:///usr/lib64/cmake/SDL3/SDL3Config.cmake",
+        "range": {
+          "start": {
+            "line": 38,
+            "character": 4
+          },
+          "end": {
+            "line": 38,
+            "character": 19
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /usr/lib64/cmake/SDL3/SDL3Config.cmake",
+      "is_function": false
+    },
+    "SDL3_SDL3_FOUND": {
+      "location": {
+        "uri": "file:///usr/lib64/cmake/SDL3/SDL3Config.cmake",
+        "range": {
+          "start": {
+            "line": 86,
+            "character": 6
+          },
+          "end": {
+            "line": 86,
+            "character": 21
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /usr/lib64/cmake/SDL3/SDL3Config.cmake",
+      "is_function": false
+    },
+    "_cmake_targets_defined": {
+      "location": {
+        "uri": "file:///usr/lib64/cmake/SDL3/SDL3sharedTargets.cmake",
+        "range": {
+          "start": {
+            "line": 18,
+            "character": 4
+          },
+          "end": {
+            "line": 18,
+            "character": 26
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /usr/lib64/cmake/SDL3/SDL3sharedTargets.cmake\n\nProtect against multiple inclusion, which would fail when already imported targets are added once more.",
+      "is_function": false
+    },
+    "${CMAKE_FIND_PACKAGE_NAME}_NOT_FOUND_MESSAGE": {
+      "location": {
+        "uri": "file:///usr/lib64/cmake/SDL3/SDL3sharedTargets.cmake",
+        "range": {
+          "start": {
+            "line": 126,
+            "character": 9
+          },
+          "end": {
+            "line": 126,
+            "character": 53
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /usr/lib64/cmake/SDL3/SDL3sharedTargets.cmake",
+      "is_function": false
+    },
+    "PACKAGE_VERSION_COMPATIBLE": {
+      "location": {
+        "uri": "file:///usr/lib64/cmake/SDL3/SDL3ConfigVersion.cmake",
+        "range": {
+          "start": {
+            "line": 24,
+            "character": 8
+          },
+          "end": {
+            "line": 24,
+            "character": 34
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /usr/lib64/cmake/SDL3/SDL3ConfigVersion.cmake",
+      "is_function": false
+    },
+    "SDL3_Headers_FOUND": {
+      "location": {
+        "uri": "file:///usr/lib64/cmake/SDL3/SDL3Config.cmake",
+        "range": {
+          "start": {
+            "line": 47,
+            "character": 4
+          },
+          "end": {
+            "line": 47,
+            "character": 22
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /usr/lib64/cmake/SDL3/SDL3Config.cmake",
+      "is_function": false
+    },
+    "check_required_components": {
+      "location": {
+        "uri": "file:///usr/lib64/cmake/SDL3/SDL3Config.cmake",
+        "range": {
+          "start": {
+            "line": 25,
+            "character": 6
+          },
+          "end": {
+            "line": 25,
+            "character": 31
+          }
+        }
+      },
+      "document_info": "defined macro\nfrom: /usr/lib64/cmake/SDL3/SDL3Config.cmake",
+      "is_function": true
+    },
+    "_cmake_targets_not_defined": {
+      "location": {
+        "uri": "file:///usr/lib64/cmake/SDL3/SDL3sharedTargets.cmake",
+        "range": {
+          "start": {
+            "line": 19,
+            "character": 4
+          },
+          "end": {
+            "line": 19,
+            "character": 30
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /usr/lib64/cmake/SDL3/SDL3sharedTargets.cmake",
+      "is_function": false
+    },
+    "${CMAKE_FIND_PACKAGE_NAME}_FOUND": {
+      "location": {
+        "uri": "file:///usr/lib64/cmake/SDL3/SDL3sharedTargets.cmake",
+        "range": {
+          "start": {
+            "line": 125,
+            "character": 9
+          },
+          "end": {
+            "line": 125,
+            "character": 41
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /usr/lib64/cmake/SDL3/SDL3sharedTargets.cmake",
+      "is_function": false
+    },
+    "SDL3_FOUND": {
+      "location": {
+        "uri": "file:///usr/lib64/cmake/SDL3/SDL3Config.cmake",
+        "range": {
+          "start": {
+            "line": 107,
+            "character": 8
+          },
+          "end": {
+            "line": 107,
+            "character": 18
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /usr/lib64/cmake/SDL3/SDL3Config.cmake",
+      "is_function": false
+    },
+    "SDL3_LIBRARIES": {
+      "location": {
+        "uri": "file:///usr/lib64/cmake/SDL3/SDL3Config.cmake",
+        "range": {
+          "start": {
+            "line": 130,
+            "character": 4
+          },
+          "end": {
+            "line": 130,
+            "character": 18
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /usr/lib64/cmake/SDL3/SDL3Config.cmake",
+      "is_function": false
+    },
+    "SDL3_SDL3-shared_FOUND": {
+      "location": {
+        "uri": "file:///usr/lib64/cmake/SDL3/SDL3Config.cmake",
+        "range": {
+          "start": {
+            "line": 52,
+            "character": 6
+          },
+          "end": {
+            "line": 52,
+            "character": 28
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /usr/lib64/cmake/SDL3/SDL3Config.cmake",
+      "is_function": false
+    },
+    "PACKAGE_VERSION_UNSUITABLE": {
+      "location": {
+        "uri": "file:///usr/lib64/cmake/SDL3/SDL3ConfigVersion.cmake",
+        "range": {
+          "start": {
+            "line": 41,
+            "character": 6
+          },
+          "end": {
+            "line": 41,
+            "character": 32
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /usr/lib64/cmake/SDL3/SDL3ConfigVersion.cmake",
+      "is_function": false
+    },
+    "${CMAKE_FIND_PACKAGE_NAME}_NOT_FOUND_MESSAGE_targets": {
+      "location": {
+        "uri": "file:///usr/lib64/cmake/SDL3/SDL3sharedTargets.cmake",
+        "range": {
+          "start": {
+            "line": 119,
+            "character": 8
+          },
+          "end": {
+            "line": 119,
+            "character": 60
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /usr/lib64/cmake/SDL3/SDL3sharedTargets.cmake",
+      "is_function": false
+    },
+    "PACKAGE_PREFIX_DIR": {
+      "location": {
+        "uri": "file:///usr/lib64/cmake/SDL3/SDL3Config.cmake",
+        "range": {
+          "start": {
+            "line": 20,
+            "character": 6
+          },
+          "end": {
+            "line": 20,
+            "character": 24
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /usr/lib64/cmake/SDL3/SDL3Config.cmake",
+      "is_function": false
+    },
+    "CMAKE_CXX_STANDARD_REQUIRED": {
+      "location": {
+        "uri": "file:///home/ovieroh/Workspace/cpp-tetris/CMakeLists.txt",
+        "range": {
+          "start": {
+            "line": 5,
+            "character": 4
+          },
+          "end": {
+            "line": 5,
+            "character": 31
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /home/ovieroh/Workspace/cpp-tetris/CMakeLists.txt",
+      "is_function": false
+    },
+    "_IMPORT_PREFIX": {
+      "location": {
+        "uri": "file:///usr/lib64/cmake/SDL3/SDL3sharedTargets.cmake",
+        "range": {
+          "start": {
+            "line": 87,
+            "character": 4
+          },
+          "end": {
+            "line": 87,
+            "character": 18
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /usr/lib64/cmake/SDL3/SDL3sharedTargets.cmake\n\nCleanup temporary variables.",
+      "is_function": false
+    },
+    "SDL3_SDL3-static_FOUND": {
+      "location": {
+        "uri": "file:///usr/lib64/cmake/SDL3/SDL3Config.cmake",
+        "range": {
+          "start": {
+            "line": 69,
+            "character": 8
+          },
+          "end": {
+            "line": 69,
+            "character": 30
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /usr/lib64/cmake/SDL3/SDL3Config.cmake",
+      "is_function": false
+    },
     "SDL3_Jar_FOUND": {
       "location": {
         "uri": "file:///usr/lib64/cmake/SDL3/SDL3Config.cmake",
@@ -50,6 +441,40 @@
         }
       },
       "document_info": "defined variable\nfrom: /usr/lib64/cmake/SDL3/SDL3Config.cmake",
+      "is_function": false
+    },
+    "CMAKE_IMPORT_FILE_VERSION": {
+      "location": {
+        "uri": "file:///usr/lib64/cmake/SDL3/SDL3sharedTargets.cmake",
+        "range": {
+          "start": {
+            "line": 134,
+            "character": 4
+          },
+          "end": {
+            "line": 134,
+            "character": 29
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /usr/lib64/cmake/SDL3/SDL3sharedTargets.cmake\n\nCommands beyond this point should not need to know the version.",
+      "is_function": false
+    },
+    "PACKAGE_VERSION": {
+      "location": {
+        "uri": "file:///usr/lib64/cmake/SDL3/SDL3ConfigVersion.cmake",
+        "range": {
+          "start": {
+            "line": 40,
+            "character": 6
+          },
+          "end": {
+            "line": 40,
+            "character": 21
+          }
+        }
+      },
+      "document_info": "defined variable\nfrom: /usr/lib64/cmake/SDL3/SDL3ConfigVersion.cmake",
       "is_function": false
     },
     "SDL3_STATIC_PRIVATE_LIBS": {
@@ -86,159 +511,6 @@
       "document_info": "defined variable\nfrom: /usr/lib64/cmake/SDL3/SDL3Config.cmake",
       "is_function": false
     },
-    "SDL3_LIBRARIES": {
-      "location": {
-        "uri": "file:///usr/lib64/cmake/SDL3/SDL3Config.cmake",
-        "range": {
-          "start": {
-            "line": 130,
-            "character": 4
-          },
-          "end": {
-            "line": 130,
-            "character": 18
-          }
-        }
-      },
-      "document_info": "defined variable\nfrom: /usr/lib64/cmake/SDL3/SDL3Config.cmake",
-      "is_function": false
-    },
-    "SDL3_STATIC_LIBRARIES": {
-      "location": {
-        "uri": "file:///usr/lib64/cmake/SDL3/SDL3Config.cmake",
-        "range": {
-          "start": {
-            "line": 131,
-            "character": 4
-          },
-          "end": {
-            "line": 131,
-            "character": 25
-          }
-        }
-      },
-      "document_info": "defined variable\nfrom: /usr/lib64/cmake/SDL3/SDL3Config.cmake",
-      "is_function": false
-    },
-    "_cmake_targets_defined": {
-      "location": {
-        "uri": "file:///usr/lib64/cmake/SDL3/SDL3sharedTargets.cmake",
-        "range": {
-          "start": {
-            "line": 18,
-            "character": 4
-          },
-          "end": {
-            "line": 18,
-            "character": 26
-          }
-        }
-      },
-      "document_info": "defined variable\nfrom: /usr/lib64/cmake/SDL3/SDL3sharedTargets.cmake\n\nProtect against multiple inclusion, which would fail when already imported targets are added once more.",
-      "is_function": false
-    },
-    "SDL3TEST_LIBRARY": {
-      "location": {
-        "uri": "file:///usr/lib64/cmake/SDL3/SDL3Config.cmake",
-        "range": {
-          "start": {
-            "line": 134,
-            "character": 4
-          },
-          "end": {
-            "line": 134,
-            "character": 20
-          }
-        }
-      },
-      "document_info": "defined variable\nfrom: /usr/lib64/cmake/SDL3/SDL3Config.cmake",
-      "is_function": false
-    },
-    "PACKAGE_VERSION_UNSUITABLE": {
-      "location": {
-        "uri": "file:///usr/lib64/cmake/SDL3/SDL3ConfigVersion.cmake",
-        "range": {
-          "start": {
-            "line": 41,
-            "character": 6
-          },
-          "end": {
-            "line": 41,
-            "character": 32
-          }
-        }
-      },
-      "document_info": "defined variable\nfrom: /usr/lib64/cmake/SDL3/SDL3ConfigVersion.cmake",
-      "is_function": false
-    },
-    "_sdl3_framework": {
-      "location": {
-        "uri": "file:///usr/lib64/cmake/SDL3/SDL3Config.cmake",
-        "range": {
-          "start": {
-            "line": 38,
-            "character": 4
-          },
-          "end": {
-            "line": 38,
-            "character": 19
-          }
-        }
-      },
-      "document_info": "defined variable\nfrom: /usr/lib64/cmake/SDL3/SDL3Config.cmake",
-      "is_function": false
-    },
-    "SDL3_SDL3-static_FOUND": {
-      "location": {
-        "uri": "file:///usr/lib64/cmake/SDL3/SDL3Config.cmake",
-        "range": {
-          "start": {
-            "line": 69,
-            "character": 8
-          },
-          "end": {
-            "line": 69,
-            "character": 30
-          }
-        }
-      },
-      "document_info": "defined variable\nfrom: /usr/lib64/cmake/SDL3/SDL3Config.cmake",
-      "is_function": false
-    },
-    "_IMPORT_PREFIX": {
-      "location": {
-        "uri": "file:///usr/lib64/cmake/SDL3/SDL3sharedTargets.cmake",
-        "range": {
-          "start": {
-            "line": 87,
-            "character": 4
-          },
-          "end": {
-            "line": 87,
-            "character": 18
-          }
-        }
-      },
-      "document_info": "defined variable\nfrom: /usr/lib64/cmake/SDL3/SDL3sharedTargets.cmake\n\nCleanup temporary variables.",
-      "is_function": false
-    },
-    "check_required_components": {
-      "location": {
-        "uri": "file:///usr/lib64/cmake/SDL3/SDL3Config.cmake",
-        "range": {
-          "start": {
-            "line": 25,
-            "character": 6
-          },
-          "end": {
-            "line": 25,
-            "character": 31
-          }
-        }
-      },
-      "document_info": "defined macro\nfrom: /usr/lib64/cmake/SDL3/SDL3Config.cmake",
-      "is_function": true
-    },
     "find_sdl3_static_dependencies": {
       "location": {
         "uri": "file:///usr/lib64/cmake/SDL3/SDL3Config.cmake",
@@ -255,278 +527,6 @@
       },
       "document_info": "defined macro\nfrom: /usr/lib64/cmake/SDL3/SDL3Config.cmake",
       "is_function": true
-    },
-    "${CMAKE_FIND_PACKAGE_NAME}_FOUND": {
-      "location": {
-        "uri": "file:///usr/lib64/cmake/SDL3/SDL3sharedTargets.cmake",
-        "range": {
-          "start": {
-            "line": 125,
-            "character": 9
-          },
-          "end": {
-            "line": 125,
-            "character": 41
-          }
-        }
-      },
-      "document_info": "defined variable\nfrom: /usr/lib64/cmake/SDL3/SDL3sharedTargets.cmake",
-      "is_function": false
-    },
-    "SDL3_FOUND": {
-      "location": {
-        "uri": "file:///usr/lib64/cmake/SDL3/SDL3Config.cmake",
-        "range": {
-          "start": {
-            "line": 107,
-            "character": 8
-          },
-          "end": {
-            "line": 107,
-            "character": 18
-          }
-        }
-      },
-      "document_info": "defined variable\nfrom: /usr/lib64/cmake/SDL3/SDL3Config.cmake",
-      "is_function": false
-    },
-    "${CMAKE_FIND_PACKAGE_NAME}_NOT_FOUND_MESSAGE": {
-      "location": {
-        "uri": "file:///usr/lib64/cmake/SDL3/SDL3sharedTargets.cmake",
-        "range": {
-          "start": {
-            "line": 126,
-            "character": 9
-          },
-          "end": {
-            "line": 126,
-            "character": 53
-          }
-        }
-      },
-      "document_info": "defined variable\nfrom: /usr/lib64/cmake/SDL3/SDL3sharedTargets.cmake",
-      "is_function": false
-    },
-    "_sdl_create_target_alias_compat": {
-      "location": {
-        "uri": "file:///usr/lib64/cmake/SDL3/SDL3Config.cmake",
-        "range": {
-          "start": {
-            "line": 111,
-            "character": 9
-          },
-          "end": {
-            "line": 111,
-            "character": 40
-          }
-        }
-      },
-      "document_info": "defined function\nfrom: /usr/lib64/cmake/SDL3/SDL3Config.cmake",
-      "is_function": true
-    },
-    "SDL3_SDL3_test_FOUND": {
-      "location": {
-        "uri": "file:///usr/lib64/cmake/SDL3/SDL3Config.cmake",
-        "range": {
-          "start": {
-            "line": 98,
-            "character": 8
-          },
-          "end": {
-            "line": 98,
-            "character": 28
-          }
-        }
-      },
-      "document_info": "defined variable\nfrom: /usr/lib64/cmake/SDL3/SDL3Config.cmake",
-      "is_function": false
-    },
-    "_cmake_expected_targets": {
-      "location": {
-        "uri": "file:///usr/lib64/cmake/SDL3/SDL3sharedTargets.cmake",
-        "range": {
-          "start": {
-            "line": 20,
-            "character": 4
-          },
-          "end": {
-            "line": 20,
-            "character": 27
-          }
-        }
-      },
-      "document_info": "defined variable\nfrom: /usr/lib64/cmake/SDL3/SDL3sharedTargets.cmake",
-      "is_function": false
-    },
-    "SDL3_Headers_FOUND": {
-      "location": {
-        "uri": "file:///usr/lib64/cmake/SDL3/SDL3Config.cmake",
-        "range": {
-          "start": {
-            "line": 47,
-            "character": 4
-          },
-          "end": {
-            "line": 47,
-            "character": 22
-          }
-        }
-      },
-      "document_info": "defined variable\nfrom: /usr/lib64/cmake/SDL3/SDL3Config.cmake",
-      "is_function": false
-    },
-    "PACKAGE_VERSION": {
-      "location": {
-        "uri": "file:///usr/lib64/cmake/SDL3/SDL3ConfigVersion.cmake",
-        "range": {
-          "start": {
-            "line": 40,
-            "character": 6
-          },
-          "end": {
-            "line": 40,
-            "character": 21
-          }
-        }
-      },
-      "document_info": "defined variable\nfrom: /usr/lib64/cmake/SDL3/SDL3ConfigVersion.cmake",
-      "is_function": false
-    },
-    "PACKAGE_PREFIX_DIR": {
-      "location": {
-        "uri": "file:///usr/lib64/cmake/SDL3/SDL3Config.cmake",
-        "range": {
-          "start": {
-            "line": 20,
-            "character": 6
-          },
-          "end": {
-            "line": 20,
-            "character": 24
-          }
-        }
-      },
-      "document_info": "defined variable\nfrom: /usr/lib64/cmake/SDL3/SDL3Config.cmake",
-      "is_function": false
-    },
-    "SDL3_SDL3-shared_FOUND": {
-      "location": {
-        "uri": "file:///usr/lib64/cmake/SDL3/SDL3Config.cmake",
-        "range": {
-          "start": {
-            "line": 52,
-            "character": 6
-          },
-          "end": {
-            "line": 52,
-            "character": 28
-          }
-        }
-      },
-      "document_info": "defined variable\nfrom: /usr/lib64/cmake/SDL3/SDL3Config.cmake",
-      "is_function": false
-    },
-    "PACKAGE_VERSION_COMPATIBLE": {
-      "location": {
-        "uri": "file:///usr/lib64/cmake/SDL3/SDL3ConfigVersion.cmake",
-        "range": {
-          "start": {
-            "line": 24,
-            "character": 8
-          },
-          "end": {
-            "line": 24,
-            "character": 34
-          }
-        }
-      },
-      "document_info": "defined variable\nfrom: /usr/lib64/cmake/SDL3/SDL3ConfigVersion.cmake",
-      "is_function": false
-    },
-    "_cmake_targets_not_defined": {
-      "location": {
-        "uri": "file:///usr/lib64/cmake/SDL3/SDL3sharedTargets.cmake",
-        "range": {
-          "start": {
-            "line": 19,
-            "character": 4
-          },
-          "end": {
-            "line": 19,
-            "character": 30
-          }
-        }
-      },
-      "document_info": "defined variable\nfrom: /usr/lib64/cmake/SDL3/SDL3sharedTargets.cmake",
-      "is_function": false
-    },
-    "${CMAKE_FIND_PACKAGE_NAME}_NOT_FOUND_MESSAGE_targets": {
-      "location": {
-        "uri": "file:///usr/lib64/cmake/SDL3/SDL3sharedTargets.cmake",
-        "range": {
-          "start": {
-            "line": 119,
-            "character": 8
-          },
-          "end": {
-            "line": 119,
-            "character": 60
-          }
-        }
-      },
-      "document_info": "defined variable\nfrom: /usr/lib64/cmake/SDL3/SDL3sharedTargets.cmake",
-      "is_function": false
-    },
-    "CMAKE_IMPORT_FILE_VERSION": {
-      "location": {
-        "uri": "file:///usr/lib64/cmake/SDL3/SDL3sharedTargets.cmake",
-        "range": {
-          "start": {
-            "line": 134,
-            "character": 4
-          },
-          "end": {
-            "line": 134,
-            "character": 29
-          }
-        }
-      },
-      "document_info": "defined variable\nfrom: /usr/lib64/cmake/SDL3/SDL3sharedTargets.cmake\n\nCommands beyond this point should not need to know the version.",
-      "is_function": false
-    },
-    "CMAKE_CXX_STANDARD": {
-      "location": {
-        "uri": "file:///home/ovieroh/Workspace/cpp-tetris/CMakeLists.txt",
-        "range": {
-          "start": {
-            "line": 4,
-            "character": 4
-          },
-          "end": {
-            "line": 4,
-            "character": 22
-          }
-        }
-      },
-      "document_info": "defined variable\nfrom: /home/ovieroh/Workspace/cpp-tetris/CMakeLists.txt",
-      "is_function": false
-    },
-    "SDL3_SDL3_FOUND": {
-      "location": {
-        "uri": "file:///usr/lib64/cmake/SDL3/SDL3Config.cmake",
-        "range": {
-          "start": {
-            "line": 86,
-            "character": 6
-          },
-          "end": {
-            "line": 86,
-            "character": 21
-          }
-        }
-      },
-      "document_info": "defined variable\nfrom: /usr/lib64/cmake/SDL3/SDL3Config.cmake",
-      "is_function": false
     }
   }
 }
